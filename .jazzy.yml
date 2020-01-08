@@ -13,10 +13,6 @@ custom_categories:
   - RxTarget
   - SectionedViewDataSourceType
   - TextInput
-- name: RxCocoa
-  children:
-  - Deprecated
-  - RxCocoa
 - name: RxCocoa/Foundation
   children:
   - KVORepresentable+CoreGraphics
@@ -31,12 +27,13 @@ custom_categories:
 - name: RxCocoa/Platform
   children:
   - DispatchQueue+Extensions
+- name: RxCocoa
+  children:
+  - RxCocoa
 - name: RxCocoa/Traits
   children:
-  - BehaviorRelay
   - ControlEvent
   - ControlProperty
-  - PublishRelay
 - name: RxCocoa/Traits/Driver
   children:
   - BehaviorRelay+Driver
@@ -102,7 +99,6 @@ custom_categories:
   - UITextView+Rx
   - UIView+Rx
   - UIViewController+Rx
-  - UIWebView+Rx
 - name: RxCocoa/iOS/Protocols
   children:
   - RxCollectionViewDataSourceType
@@ -126,7 +122,6 @@ custom_categories:
   - RxTableViewDelegateProxy
   - RxTextStorageDelegateProxy
   - RxTextViewDelegateProxy
-  - RxWebViewDelegateProxy
 - name: RxCocoa/macOS
   children:
   - NSButton+Rx
@@ -134,13 +129,20 @@ custom_categories:
   - NSImageView+Rx
   - NSSlider+Rx
   - NSTextField+Rx
+  - NSTextView+Rx
   - NSView+Rx
+- name: RxRelay
+  children:
+  - BehaviorRelay
+  - Observable+Bind
+  - PublishRelay
+  - Utils
 - name: RxSwift
   children:
   - AnyObserver
   - Cancelable
   - ConnectableObservableType
-  - Deprecated
+  - Date+Dispatch
   - Disposable
   - Errors
   - Event
@@ -181,7 +183,6 @@ custom_categories:
 - name: RxSwift/Extensions
   children:
   - Bag+Rx
-  - String+Rx
 - name: RxSwift/Observables
   children:
   - AddRef
@@ -193,6 +194,7 @@ custom_categories:
   - CombineLatest+Collection
   - CombineLatest+arity
   - CombineLatest
+  - CompactMap
   - Concat
   - Create
   - Debounce
@@ -257,19 +259,19 @@ custom_categories:
   - AnonymousObserver
   - ObserverBase
   - TailRecursiveSink
+- name: RxSwift/Platform
+  children:
+  - AtomicInt
+  - DispatchQueue+Extensions
+  - Platform.Darwin
+  - Platform.Linux
+  - RecursiveLock
 - name: RxSwift/Platform/DataStructures
   children:
   - Bag
   - InfiniteSequence
   - PriorityQueue
   - Queue
-- name: RxSwift/Platform
-  children:
-  - DeprecationWarner
-  - DispatchQueue+Extensions
-  - Platform.Darwin
-  - Platform.Linux
-  - RecursiveLock
 - name: RxSwift/Schedulers
   children:
   - ConcurrentDispatchQueueScheduler
